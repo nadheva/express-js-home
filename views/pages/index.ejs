@@ -12,7 +12,15 @@
 <main>
     <div class="jumbotron">
         <h1>This is great</h1>
-        <p>Welcome to templating using EJS</p>
+        <p><%= tagline %></p>
+        <ul>
+            <% mascots.forEach(function(mascot) { %>
+                <li>
+                    <strong><%= mascot.name %></strong>
+                    representing <%= mascot.organization %>, born <%= mascot.birth_year %>
+                </li>
+            <% }); %>
+        </ul>
     </div>
 </main>
 

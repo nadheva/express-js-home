@@ -7,13 +7,13 @@ export const Home = (req, res) => {
     ];
     var tagline = "No programming concept is complete without a cute animal mascot.";
 
-    res.render('../pages/index', {
+    res.render('../views/pages/index', {
         mascots: mascots,
         tagline: tagline
     });
 }
 
 export const About = (req, res) => {
-    res.send('Halaman tentang');
+    res.render('../views/pages/about');
 
 } 
