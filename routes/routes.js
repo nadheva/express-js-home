@@ -1,19 +1,14 @@
 //import express
 import express from "express";
 
+//import page controller
+import {Home, About} from "../controllers/page.js";
+
 //init express route
 const router = express.Router();
 
 //basic route
-router.get('/', (req, res)=> {
-    res.send('heloo');
-});
-
-// app.get('/about', (req, res)  => {
-//     res.send('Halooooo');
-// });
-router.get('/about', (req, res) => {
-    res.send('Welcome to About Page');
-});
+router.get('/', Home);
+router.get('/about', About);
 
 export default router;
